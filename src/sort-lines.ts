@@ -102,6 +102,10 @@ function shuffleCompare(): number {
   return Math.random() > 0.5 ? 1 : -1;
 }
 
+function invertOrderCompare(): number {
+  return 1
+}
+
 function getVariableCharacters(line: string): string {
   const match = line.match(/(.*)=/);
   if (!match) {
@@ -121,3 +125,4 @@ export const sortVariableLengthReverse = () => sortActiveSelection(variableLengt
 export const sortNatural = () => sortActiveSelection(naturalCompare, false);
 export const sortUnique = () => sortActiveSelection(undefined, true);
 export const sortShuffle = () => sortActiveSelection(shuffleCompare, false);
+export const sortInvertedOrder = () => sortActiveSelection(invertOrderCompare, false);

@@ -38,7 +38,8 @@
     "onCommand:sortLines.sortLinesVariableLengthReverse",
     "onCommand:sortLines.sortLinesNatural",
     "onCommand:sortLines.sortLinesUnique",
-    "onCommand:sortLines.sortLinesShuffle"
+    "onCommand:sortLines.sortLinesShuffle",
+    "onCommand:sortLines.sortLinesInvertedOrder"
   ],
   "main": "./out/extension",
   "contributes": {
@@ -86,6 +87,10 @@
       {
         "command": "sortLines.sortLinesShuffle",
         "title": "Sort lines (shuffle)"
+      },
+      {
+        "command": "sortLines.sortLinesInvertedOrder",
+        "title": "Invert lines order"
       }
     ],
     "configuration": {
@@ -112,13 +117,13 @@
       }
     ],
     "menus": {
-    	"editor/context": [
-          {
-            "command": "sortLines.sortLines",
-            "when": "editorTextFocus",
-            "group": "sortLines@1"
-          }
-    	]
+      "editor/context": [
+        {
+          "command": "sortLines.sortLines",
+          "when": "editorTextFocus",
+          "group": "sortLines@1"
+        }
+      ]
     }
   },
   "devDependencies": {
